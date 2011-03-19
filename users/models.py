@@ -1,7 +1,11 @@
 from django.db import models
-from groups.models import Group
 
-# Create your models here.
+class Group(models.Model):
+    name = models.CharField(max_length=50)
+    description = models.TextField()
+    
+    def __unicode__(self):
+        return u'%s' % (self.name)
 
 class User(models.Model):
     name = models.CharField(max_length=50)
@@ -12,7 +16,7 @@ class User(models.Model):
     notes = models.TextField()
     website = models.URLField()
     nickname = models.TextField()
-    #groups = models.ManyToManyField(Group)
+    groups = models.ManyToManyField(Group)
 
     def __unicode__(self):
-        return u'%s %s' % (self.name) % (self.surname)
+        return u'%s' % (self.name)

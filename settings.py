@@ -12,7 +12,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '/Users/willyaranda/Documents/workspace/phonebook/src/sqlite.db',                      # Or path to database file if using sqlite3.
+        'NAME': 'db.sqlite3',                      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -31,7 +31,7 @@ TIME_ZONE = 'Europe/Madrid'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'es-es'
+LANGUAGE_CODE = 'es'
 
 SITE_ID = 1
 
@@ -94,6 +94,4 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'users',
-    'groups',
-    'agenda',
 )
