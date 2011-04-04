@@ -1,0 +1,29 @@
+{% load i18n %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="shortcut icon" href="/site_media/images/favicon.ico" >
+		<link rel="stylesheet" href="/site_media/css/main.css" type="text/css" />
+        <script type="text/javascript" src="/site_media/js/jquery-1.4.4.min.js"></script>
+        <title>{% block title %}{% trans 'Phonebook' %}{% endblock %}</title>
+    </head>
+    <body>
+		<div class="header">
+        	<h1>Agenda de contactos</h1>
+        </div>
+        <div class="main">
+            {% block menu %}
+                <h2>Menú</h2>
+            {% endblock %}
+            <div class="content">
+                {% block content %}
+                <!-- Aquí el contenido -->
+                {% endblock %}
+            </div>
+        </div>
+        <div class="footer">
+          <p>Footer</p>
+        </div>
+    </body>
+</html>

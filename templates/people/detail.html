@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block title %}{{ person.name }}{% endblock %}
+{% block titleheader %}{{ event.name }}{% endblock %}
+
+{% block content %}
+
+<h2>{{ person.name }} {{ person.surname }}</h2>
+
+<p class="classname">El nombre es: {{ person.name }}</p>
+<p class="classname">El apellido es: {{ person.surname }}</p>
+<p class="classname">El teléfono es: {{ person.phone }}</p>
+<p class="classname">El correo es: {{ person.email }}</p>
+<p class="classname">El nombre es: {{ person.name }}</p>
+<p class="classname">El nombre es: {{ person.name }}</p>
+<p class="classname">El nombre es: {{ person.name }}</p>
+<p class="classname">El nombre es: {{ person.name }}</p>
+<p class="classname">El nombre es: {{ person.name }}</p>
+
+{% endblock %}

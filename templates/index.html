@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block title %}{% trans 'Phonebook' %}{% endblock %}
+
+{% block content %}
+
+
+{% if agenda %}
+<ul id="person-list">
+    {% for people in agenda %}
+    <li><a href="/{{ people.id }}/{{ people.slug }}/">{{ people.name }}</a> <small>()</small></li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+{% endblock %}
